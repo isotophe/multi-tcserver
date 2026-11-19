@@ -7,7 +7,7 @@ setlocal enabledelayedexpansion
 set "JAR_FILE=C:\Gertec\tc-server.jar"
 set "AGENT_FILE=C:\Gertec\title-agent.jar"
 set "BASE_DIR=C:\Gertec\Instances"
-set "TOTAL_INSTANCES=8"
+set "TOTAL_INSTANCES=2"
 set "DELAY_SECONDS=3"
 :: ==========================================
 
