@@ -20,6 +20,11 @@ Um JAR de 2KB (title-agent) insere na barra de títulos da janela do TC Server a
 - Número da loja/instância inserido na janela de título, facilitando a identificação;
 - Launcher compatível com Windows 7, complemento Java compatível com JRE 1.8, mantendo compatibilidade plena do ambiente com as especificações do TCServer.
 
+# Instalando o Launcher
+- Baixe e execute o instalador do Multi, ou baixe os arquivos `tclauncher.bat` e `title-agent.jar` e coloque-os no diretório `C:\Gertec`.
+- Você deve fornecer o binário original do TC Server. Faça o download do TCServer-V2.7.1 no site da Gertec: https://www.gertec.com.br/download-center/.
+- Extraia o arquivo TCServer-V2.7.1.zip. Renomeie o binário para `tc-server.jar` (ou ajuste o caminho para o JAR da Gertec dentro do arquivo `tclauncher.bat`, ajustando `set "JAR_FILE=C:\Gertec\tc-server.jar"` para corresponder ao nome do JAR original.
+
 # Utilizando o Launcher
 Em `C:\Gertec`, abra para edição o script `tclauncher.bat`
 
