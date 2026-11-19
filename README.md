@@ -26,4 +26,32 @@ Em `C:\Gertec`, abra para edição o script `tclauncher.bat`
 No script, configure o número de instâncias que deseja executar:
 
 `set "TOTAL_INSTANCES=8"`
+
 onde 8 executa 8 instâncias do TC Server.
+
+Ao iniciar os TC Servers, todos concorrerão pelo mesmo conjunto de portas. Uma das instâncias inicializará normalmente. As outras printarão erros de JVM_bind nas portas já utilizadas e ficarão com os serviços parados.
+
+O TC Server utiliza 4 portas, das quais 3 são editáveis através da janela principal:
+- 6500
+- 16510
+- 8080
+
+Uma das portas, a 6503, é utilizada pelo serviço de atualização de firmware e é hardcoded no binário. Não é possível alterá-la sem modificações ao binário fornecido pela Gertec.
+
+Ao iniciar os TC Servers pela primeira vez, pare os serviços que estiverem em execução e edite as portas.
+
+Para referência, adotei o seguinte esquema:
+
+
+| Loja  | Porta SC501  | Porta SC504  | Porta HTTP  |
+| ------------ | ------------ | ------------ | ------------ |
+| Loja 1  | 65001  | 16511  | 8081  |
+| Loja 2  | 65002  | 15512  | 8082  |
+| Loja 3  | 65003  | 15513  | 8083  |
+| Loja 4  | 65004  | 15514  | 8084  |
+
+Como não é possível utilizar a porta 6503, pulei para a faixa 65000. Seguindo esta lógica e iniciando em 65001 para a loja 1, ainda seria possível subir 535 no mesmo servidor.
+
+Após editar todas as portas, inicie todos os serviços um-a-um apertando nos respectivos botões 'Iniciar' de cada janela. Isto salvará a nova configuração em cada um dos diretórios .tc-server correspondentes às instâncias. Também já pode configurar seu banco de dados.
+
+Após, feche todas as janelas e execute o `tclauncher.bat` novamente. O launcher deve executar cada uma das instâncias e o log de inicialização deve reportar que um dos servidor SC501 está escutado na porta 6500x, enquanto o próximo SC501 reportará o erro de JVM_Bind. Este segundo é inofensivo. Apenas não será possível utilizar o serviço de atualização de firmware.
