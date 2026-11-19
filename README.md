@@ -54,4 +54,4 @@ Como não é possível utilizar a porta 6503, pulei para a faixa 65000. Seguindo
 
 Após editar todas as portas, inicie todos os serviços um-a-um apertando nos respectivos botões 'Iniciar' de cada janela. Isto salvará a nova configuração em cada um dos diretórios .tc-server correspondentes às instâncias. Também já pode configurar seu banco de dados.
 
-Após, feche todas as janelas e execute o `tclauncher.bat` novamente. O launcher deve executar cada uma das instâncias e o log de inicialização deve reportar que um dos servidor SC501 está escutado na porta 6500x, enquanto o próximo SC501 reportará o erro de JVM_Bind. Este segundo é inofensivo. Apenas não será possível utilizar o serviço de atualização de firmware.
+Após, feche todas as janelas e execute o `tclauncher.bat` novamente. O launcher deve executar cada uma das instâncias e o log de inicialização deve reportar que um dos servidores SC501 está escutado na porta 6500x, enquanto o próximo SC501 reportará o erro de JVM_Bind. Este segundo é inofensivo. Apenas não será possível utilizar o serviço de atualização de firmware.
