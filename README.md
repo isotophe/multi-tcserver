@@ -1,6 +1,8 @@
 # multi-tcserver
 Multi-site launcher para o servidor de terminais de consulta TC Server da Gertec. Permite executar múltiplas instâncias do TC Server em uma mesma máquina.
 
+![](multi-tc.png?raw=true)
+
 ## Para que serve?
 Desenvolvi este launcher para resolver um problema interno do meu trabalho. Tínhamos um TC Server por loja, executando em um computador aleatório (do gerente, frente de caixa, depósito...). Sempre ocorria de alguém se deparar com a janela do TC Server, não saber o que é, fechar e então tirar de operação todos os Busca-Preços da loja.
 
